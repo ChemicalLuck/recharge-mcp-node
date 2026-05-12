@@ -1,0 +1,17 @@
+{
+  "name": "recharge-mcp-node",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "Joe Tebbett",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "build": "mcpb pack"
+  },
+  "dependencies": {
+    "@cfworker/json-schema": "^4.1.1",
+    "@chemicalluck/recharge-api-node": "^1.0.3",
+    "@modelcontextprotocol/server": "^2.0.0-alpha.2"
+  }
+}

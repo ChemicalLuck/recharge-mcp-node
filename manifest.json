@@ -1,0 +1,33 @@
+{
+  "manifest_version": "0.2",
+  "name": "recharge-mcp-node",
+  "display_name": "Recharge",
+  "version": "1.0.0",
+  "description": "MCP Server for Recharge API",
+  "author": {
+    "name": "Joe Tebbett"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "RECHARGE_ACCESS_TOKEN": "${user_config.access_token}"
+      }
+    }
+  },
+  "user_config": {
+    "access_token": {
+      "type": "string",
+      "title": "Recharge API Access Token",
+      "description": "Access Token for Recharge API",
+      "required": true,
+      "sensitive": true
+    }
+  },
+  "license": "MIT"
+}
